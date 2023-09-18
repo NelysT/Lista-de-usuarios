@@ -1,18 +1,6 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			],
 			listContact: []
 		},
 		actions: {
@@ -23,7 +11,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					body: JSON.stringify({
 						"full_name": "Dave Bradley",
 						"email": "dave@gmail.com",
-						"agenda_slug": "nelys",
+						"agenda_slug": "prueba",
 						"address": "47568 NW 34ST, 33434 FL, USA",
 						"phone": "7864445566"
 					}),
@@ -36,17 +24,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			obtenerUsuario: () => {
 				const store = getStore();
-				 fetch("https://playground.4geeks.com/apis/fake/contact/agenda/nelys", {
+				 fetch("https://playground.4geeks.com/apis/fake/contact/agenda/prueba", {
 					method: 'GET',
 					//body: JSON.stringify(),
 					headers: {
 						'Content-Type': 'application/json'
 					}})
-					.then(response => response.text())
+					.then(response => response.json())
 					.then(result =>{
 						// Actualiza el estado usando setStore
 						const store = getStore();
-						store.listContact(result);
+						store.listContact = result;
 						setStore(store);
 						console.log('lista de contactos', store.listContact)
 					  })
