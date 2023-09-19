@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
 import "../../styles/home.css";
 import { Context } from "../store/appContext";
+import { Link } from "react-router-dom";
 
 export const Home = () => {
 	const { store, actions } = useContext(Context);
-	console.log('store',store)
+	console.log('store Home',store) 
 	return (
 		<div className="container">
 			<div>
@@ -25,9 +26,9 @@ export const Home = () => {
 			<button className="btn btn-success me-4" onClick={() => actions.crearAgenda()}>
 				Crear Agenda
 			</button>
-			<button className="btn btn-success">
-				Adicionar Usuario
-			</button>
+			<Link to="/addUsuario">
+					<button className="btn btn-primary">Adicionar usuario</button>
+				</Link>
 			
 			
     </div>
