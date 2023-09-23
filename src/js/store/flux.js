@@ -2,6 +2,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			listContact: [],
+			contact: "",
 			
 		},
 		actions: {
@@ -59,9 +60,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then (response => {
 						response.json()
 						console.log(response)})
-					.then (response => {setStore({...getStore().listContact, response})})
+					.then (response => {setStore({...getStore().contact, response})})
 					
 				},
+
+				eliminarContactos:(contact) => {
+					fetch (`https://playground.4geeks.com/apis/fake/contact/${contact}`, {
+						method: "DELETE"})
+					.then(response => response.json())
+					.then(result => {
+						setStore({...getStore().listContact, result})
+						console.log("contact", contact)
+					})
+					.catch()
+					
+				},
+				
 					
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
