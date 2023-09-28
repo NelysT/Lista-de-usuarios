@@ -15,6 +15,7 @@ export const AddUsuario = () => {
 	const enviarFormulario = (event) => {
 		event.preventDefault()
 		actions.guardarInputs(contact)
+		
 	}
 	return (
         <div className="container">
@@ -67,7 +68,7 @@ export const AddUsuario = () => {
 					onChange={(e) => setContact({...contact, address: e.target.value})}
 					></input>
             </div>
-            <button type="submit" class="btn btn-primary">Save</button>
+            <button type="submit" class="btn btn-primary" onClick={() => actions.obtenerUsuario()}>Save</button>
         </form>
     </div>
     );

@@ -75,6 +75,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch()
 					
 				},
+			
 				
 					
 			exampleFunction: () => {

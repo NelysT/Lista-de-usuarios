@@ -16,7 +16,13 @@ export const Home = () => {
 							<p>Email: {contact.email}</p>
 							<p>Dirección: {contact.address}</p>
 							<p>Teléfono: {contact.phone}</p>
-							<i class="fa-solid fa-trash" onClick={() => actions.eliminarContactos(contact.id)}></i>
+							<i class="fa-solid fa-trash" onClick={ () =>{
+								actions.eliminarContactos(contact.id)
+								actions.obtenerUsuario()}}></i>
+							<Link to="/editContact">
+								<i class="fa-solid fa-pen"> </i>
+							</Link>
+							
 						</li>
 					))}
 			</ul>	
