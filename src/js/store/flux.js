@@ -43,11 +43,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(error => console.log('error', error))
 			},
 
-			// updateInputValue: (fieldName, value) => {
-			// 	const store = getStore();
-			// 	store.[fieldName] = value;
-			// 	setStore(store);
-			//   },
+		
 			guardarInputs: (newContact) => {
 				
 					fetch("https://playground.4geeks.com/apis/fake/contact/", {
@@ -63,6 +59,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then (response => {setStore({...getStore().contact, response})})
 					
 				},
+				updateContact: (contact) => {
+				
+					fetch(`https://playground.4geeks.com/apis/fake/contact/${contact.id}`, {
+					method: "PUT",
+					body: JSON.stringify(contact),
+					headers: {
+					"Content-Type": "application/json",
+					},
+				})
+					.then (response => {
+						response.json()
+						console.log(response)})
+					.then (response => {setStore({...getStore().contact, response})})
+					
+				},
+				
 
 				eliminarContactos:(contact) => {
 					fetch (`https://playground.4geeks.com/apis/fake/contact/${contact}`, {

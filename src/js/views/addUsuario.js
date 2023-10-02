@@ -15,7 +15,13 @@ export const AddUsuario = () => {
 	const enviarFormulario = (event) => {
 		event.preventDefault()
 		actions.guardarInputs(contact)
-		
+		setContact({
+			full_name: "",
+			email: "",
+			phone: "",
+			address: "",
+			agenda_slug: "nelys",
+		  });
 	}
 	return (
         <div className="container">

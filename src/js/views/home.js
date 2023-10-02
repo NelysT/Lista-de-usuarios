@@ -19,10 +19,10 @@ export const Home = () => {
 							<i class="fa-solid fa-trash" onClick={ () =>{
 								actions.eliminarContactos(contact.id)
 								actions.obtenerUsuario()}}></i>
-							<Link to="/editContact">
-								<i class="fa-solid fa-pen"> </i>
+							<Link to={`/editContact/${contact.id}`}>
+								<i class="fa-solid fa-pen"></i>
 							</Link>
-							
+													
 						</li>
 					))}
 			</ul>	
@@ -30,13 +30,12 @@ export const Home = () => {
 			<button className="btn btn-success me-4" onClick={() => actions.obtenerUsuario()}>
 				Mostrar lista de Usuarios
 			</button>
-			<button className="btn btn-success me-4" onClick={() => actions.crearAgenda()}>
-				Crear Agenda
-			</button>
 			<Link to="/addUsuario">
 					<button className="btn btn-primary">Adicionar usuario</button>
 				</Link>
-			
+			<button className="btn btn-success me-4" onClick={() => actions.crearAgenda()}>
+				Crear Agenda
+			</button>
 			
     </div>
   );
