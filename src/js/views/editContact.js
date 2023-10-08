@@ -17,6 +17,13 @@ export const EditContact = () => {
     const enviarFormulario = (event) => {
       event.preventDefault()
       actions.updateContact(contact)
+      setContact({
+        full_name: "",
+        email: "",
+        phone: "",
+        address: "",
+        agenda_slug: "nelys",
+        });
      
     }
 
@@ -84,7 +91,7 @@ export const EditContact = () => {
 					onChange={(e) => setContact({...contact, address: e.target.value})}
 					></input>
             </div>
-            <button type="submit" class="btn btn-primary" onClick={() => actions.obtenerUsuario()}>Save</button>
+            <button type="submit" class="btn btn-primary" >Save</button>
         </form>
     </div>
     );

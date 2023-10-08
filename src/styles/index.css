@@ -1,3 +1,106 @@
 /* 
     General Styles
 */
+body {
+    background: #cfd3d8;
+  }
+.col_1{
+    border-bottom-left-radius: 3rem;
+    border-top-left-radius: 3rem;
+}
+  .botonesEditarEliminar {
+    margin-top: 3rem;
+    justify-content: space-around;
+}
+.btn-light {
+    color: #000;
+    background-color: #f8f9fa;
+    border-color: #f95738;
+    margin-left: 1rem;
+    border-radius: 1rem;
+}
+.botones {
+    justify-content: center;
+    margin: 1rem;
+   border-bottom-left-radius: 3rem;
+    background: #FFF2C4;
+    padding: 1rem;
+}
+
+.row-agenda {
+    margin-bottom: 30px;
+    border: 1px solid #6c757d;
+    margin-top: 20px;
+    border-radius: 8px;
+    display: flex;
+    background: #f2f2f2;
+    padding: 10px 10px;
+    width: 83%;
+    margin-left: 2.5rem;
+}
+i.fa-solid.fa-trash {
+    margin-top: 12px;
+    color: #f95738c4;
+    margin-left: 0px;
+    font-size: 30px;
+}
+.fa-book:before {
+    content: "\f02d";
+    margin-top: 12px;
+    color: #f95738c4;
+    margin-left: 0px;
+    font-size: 30px;
+}
+i.fa-solid.fa-user {
+    margin-top: 10px;
+    font-size: 20px;
+    padding: 10px 12px;
+    background: #f95738c4;
+    border-radius: 100%;
+    color: #ffffff;
+    margin-left: 5px;
+}
+i.fa-solid.fa-pen {
+    margin-top: 12px;
+    color: #f95738c4;
+    margin-left: 0px;
+    font-size: 30px;
+}
+.mujer{
+    margin-top: 10%;
+}
+.col-6 {
+    flex: 0 0 auto;
+    width: 50%;
+    background: white;
+    
+}
+.datos {
+    flex: 0 0 auto;
+    width: 64%;
+    background: white;
+    border-radius: 1rem;
+   
+    margin-bottom: 0.5rem;
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+    color: gray;
+    
+}
+.lista {
+    background: #f95738c4;
+    border-bottom-right-radius: 5rem;
+    border-top-right-radius: 5rem;
+    padding: 1rem;
+}
+
+h1 {
+    font-size: 3.5rem;
+    /* margin-top: 2rem; */
+    padding: 1rem;
+    background: #FFF2C4;
+    color: #c2bcbc;
+    font-family: fantasy;
+    margin: 1rem;
+    border-top-left-radius: 3rem;
+}
