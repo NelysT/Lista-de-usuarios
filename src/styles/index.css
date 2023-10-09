@@ -182,3 +182,43 @@ label {
     font-family: fantasy;
     color: #adb5bd;
 }
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .row {
+        width: 100%;
+        margin: 0.5rem;
+             
+    }
+    i.fa-solid.fa-trash {
+        margin-top: 12px;
+        color: #f95738c4;
+        margin-left: 0px;
+        font-size: 20px;
+    }
+    .fa-book:before {
+        content: "\f02d";
+        margin-top: 12px;
+        color: #f95738c4;
+        margin-left: 0px;
+        font-size: 20px;
+    }
+    i.fa-solid.fa-user {
+        margin-top: 10px;
+        font-size: 10px;
+        padding: 10px 12px;
+        background: #f95738c4;
+        border-radius: 100%;
+        color: #ffffff;
+        margin-left: 5px;
+    }
+    i.fa-solid.fa-pen {
+        margin-top: 12px;
+        color: #f95738c4;
+        margin-left: 0px;
+        font-size: 20px;
+    }
+    .btnSave {
+        
+        margin-left: 1.5rem;
+    }
+}
