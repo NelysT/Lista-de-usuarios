@@ -15,18 +15,18 @@ export const Home = () => {
 	return (
 		<div>
 			<div className="container">
-				<div className="row_grande d-flex">
-					<div className="col_1 col-6">
-						<h1>Lista de Contactos</h1>
+				<div className="row">
+					<div className="col_1 col-12 col-md-6">
+						<h1>List Contacts</h1>
 						<img className="mujer" src={hombre} />
 						<div className="botones d-flex">
 							<Link to="/addUsuario">
-								<button className="btn btn-light"><i class="fa-solid fa-user"></i> Adicionar usuario</button>
+								<button className="btn btn-light"><i class="fa-solid fa-user"></i> Add Contact</button>
 							</Link>
-							<button className="btn btn-light" onClick={() => actions.crearAgenda()}><i class="fa-solid fa-book"></i> Crear Agenda</button>
+							<button className="btn btn-light" onClick={() => actions.crearAgenda()}><i class="fa-solid fa-book"></i> Add diary</button>
 						</div>
 					</div>
-					<div className="lista col-6">
+					<div className="lista col-12 col-md-6">
 						<div className="contenedor-agenda">
 							{store.listContact.map((contact) => (
 								<div className="row-agenda" key={contact.id}>
@@ -45,10 +45,14 @@ export const Home = () => {
 											<i class="fa-solid fa-pen"></i>
 										</Link>
 
-										<i
-											className="fa-solid fa-trash"
-											onClick={() => actions.eliminarContactos(contact.id)}
-										></i>
+										<i className="fa-solid fa-trash"
+											onClick={() => {
+												const  confirmDelete = window.confirm("Are you sure you want to delete this contact?");
+												if (confirmDelete) {
+												actions.eliminarContactos(contact.id);
+												}
+											}}
+											></i>
 									</div>
 								</div>
 							))}
