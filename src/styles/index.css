@@ -8,12 +8,12 @@ body {
     border-bottom-left-radius: 3rem;
     border-top-left-radius: 3rem;
 }
-  .botonesEditarEliminar {
+.botonesEditarEliminar {
     margin-top: 3rem;
     justify-content: space-around;
 }
 .btn-light {
-    color: #000;
+    color: #a39c9c;
     background-color: #f8f9fa;
     border-color: #f95738;
     margin-left: 1rem;
@@ -29,9 +29,9 @@ body {
 
 .row-agenda {
     margin-bottom: 30px;
-    border: 1px solid #6c757d;
+    border: 1px solid #f95738;
     margin-top: 20px;
-    border-radius: 8px;
+    border-radius: 2rem;
     display: flex;
     background: #f2f2f2;
     padding: 10px 10px;
@@ -67,7 +67,7 @@ i.fa-solid.fa-pen {
     font-size: 30px;
 }
 .mujer{
-    margin-top: 10%;
+    width: 96%;
 }
 .col-6 {
     flex: 0 0 auto;
@@ -88,7 +88,7 @@ i.fa-solid.fa-pen {
     
 }
 .lista {
-    background: #f95738c4;
+    background-image: url("https://i.ibb.co/KrVsmhx/background.jpg");
     border-bottom-right-radius: 5rem;
     border-top-right-radius: 5rem;
     padding: 1rem;
@@ -103,4 +103,78 @@ h1 {
     font-family: fantasy;
     margin: 1rem;
     border-top-left-radius: 3rem;
+}
+.row_grande {
+    width: 80%;
+    height: 90%;
+    justify-content: center;
+    margin-top: 3rem
+}
+.formulario {
+    
+        border: 1px solid #f95738;
+        background: #ffffff91;
+        width: 89%;
+        padding: 3rem;
+        border-radius: 3rem;
+        margin-top: 2rem;
+        margin-left: 1.5rem;
+}
+.fa-solid, .fas {
+    font-weight: 900;
+    font-size: 30px;
+    color: #f95738;
+}
+.fa-floppy-disk:before, .fa-save:before {
+    content: "\f0c7";
+    font-size: 30px;
+    color: #f95738;
+    width: 50rem;
+}
+.btn-Home {
+    width: 10rem;
+    height: 4rem;
+    align-items: center;
+   
+    margin-top: 0.5rem;
+    color: #a39c9c;
+    background-color: #f8f9fa;
+    border-color: #f95738;
+   
+    border-radius: 1rem;
+ }
+.btnSave {
+    width: 10rem;
+    height: 4rem;
+    align-items: center;
+    margin-left: 6rem;
+    margin-top: 1.5rem;
+    color: #a39c9c;
+    background-color: #f8f9fa;
+    border-color: #f95738;
+   
+    border-radius: 1rem;
+ }
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1.75rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #f95738;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 1.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+label {
+    display: inline-block;
+    font-size: 2rem;
+    font-family: fantasy;
+    color: #adb5bd;
 }

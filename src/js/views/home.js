@@ -6,54 +6,54 @@ import user from "../../img/user.png";
 import hombre from "../../img/hombre.png";
 export const Home = () => {
 	const { store, actions } = useContext(Context);
-	console.log('store Home',store) 
+	console.log('store Home', store)
 
 	useEffect(() => {
 		actions.obtenerUsuario();
-	  }, [store.listContact])
+	}, [store.listContact])
 
 	return (
 		<div>
-		<div className="container">
-			<div className="row_grande container-fluid d-flex">
-			<div className="col_1 col-6">
-					<h1>Lista de Contactos</h1>
-					<img className="mujer" src={hombre}/>
-					<div className="botones d-flex">
-				<Link to="/addUsuario">
-					<button className="btn btn-light"><i class="fa-solid fa-user"></i> Adicionar usuario</button>
-				</Link>
-			<button className="btn btn-light" onClick={() => actions.crearAgenda()}><i class="fa-solid fa-book"></i> Crear Agenda</button>
-    	</div>	
-				</div>
-				<div className="lista col-6">
-				<div className="contenedor-agenda">
-				{store.listContact.map((contact) => (
-          <div className="row-agenda" key={contact.id}>
-            <div className="col-2">
-              <i className="fa-solid fa-user"></i>
-            </div>
-            <div className="col-9">
-              <p id="texto">{contact.title}</p>
-              <p id="texto"><strong>Name: {contact.full_name}</strong></p>
-              <p id="texto">Email: {contact.email}</p>
-              <p id="texto">Phone: {contact.phone}</p>
-              <p id="texto">Address: {contact.address} </p>
-            </div>
-            <div className="col-1">
-            <Link to={`/editContact/${contact.id}`}>
-								<i class="fa-solid fa-pen"></i>
+			<div className="container">
+				<div className="row_grande d-flex">
+					<div className="col_1 col-6">
+						<h1>Lista de Contactos</h1>
+						<img className="mujer" src={hombre} />
+						<div className="botones d-flex">
+							<Link to="/addUsuario">
+								<button className="btn btn-light"><i class="fa-solid fa-user"></i> Adicionar usuario</button>
 							</Link>
+							<button className="btn btn-light" onClick={() => actions.crearAgenda()}><i class="fa-solid fa-book"></i> Crear Agenda</button>
+						</div>
+					</div>
+					<div className="lista col-6">
+						<div className="contenedor-agenda">
+							{store.listContact.map((contact) => (
+								<div className="row-agenda" key={contact.id}>
+									<div className="col-2">
+										<i className="fa-solid fa-user"></i>
+									</div>
+									<div className="col-9">
+										<p id="texto">{contact.title}</p>
+										<p id="texto"><strong>Name: {contact.full_name}</strong></p>
+										<p id="texto">Email: {contact.email}</p>
+										<p id="texto">Phone: {contact.phone}</p>
+										<p id="texto">Address: {contact.address} </p>
+									</div>
+									<div className="col-1">
+										<Link to={`/editContact/${contact.id}`}>
+											<i class="fa-solid fa-pen"></i>
+										</Link>
 
-              <i
-                className="fa-solid fa-trash"
-                onClick={() => actions.eliminarContactos(contact.id)}
-              ></i>
-            </div>
-          </div>
-        ))}
-      </div>
-					{/* <div>
+										<i
+											className="fa-solid fa-trash"
+											onClick={() => actions.eliminarContactos(contact.id)}
+										></i>
+									</div>
+								</div>
+							))}
+						</div>
+						{/* <div>
 						{store.listContact.map((contact) => (
 						<div key={contact.id}>
 							<div className="row">
@@ -82,11 +82,11 @@ export const Home = () => {
 						</div>
 					))}
 				</div>	 */}
+					</div>
+
 				</div>
-				
 			</div>
+
 		</div>
-		
-	</div>
-  );
+	);
 };
