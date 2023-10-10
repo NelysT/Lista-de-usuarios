@@ -218,7 +218,40 @@ label {
         font-size: 20px;
     }
     .btnSave {
-        
+        margin-left: 8px;
+    }
+    .col_1, .lista {
+        border-radius: 3rem
+    }
+    .row-agenda {
+        margin-bottom: 30px;
+        border: 1px solid #f95738;
+        margin-top: 20px;
+        border-radius: 2rem;
+        display: flex;
+        background: #f2f2f2;
+        padding: 10px 10px;
+        width: 83%;
         margin-left: 1.5rem;
+    }
+    h1 {
+        font-size: 3.5rem;
+        /* margin-top: 2rem; */
+        padding: 1rem;
+        background: #FFF2C4;
+        color: #c2bcbc;
+        font-family: fantasy;
+        margin: 1rem;
+        border-top-left-radius: 3rem;
+        border-top-right-radius: 3rem;
+        text-align: center;
+    }
+    .botones {
+        justify-content: center;
+        margin: 1rem;
+        border-bottom-left-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+        background: #FFF2C4;
+        padding: 1rem;
     }
 }
